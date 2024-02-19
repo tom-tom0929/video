@@ -1,0 +1,141 @@
+// Place all the styles related to the tvs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.dorama{
+    display: flex;
+    gap: 10px;
+}
+
+.variety{
+    margin-top: 40px;
+    display: flex;
+    gap: 200px;
+}
+
+.eiga{
+    margin-top: 40px;
+    display: flex;
+    gap: 30px;
+}
+
+.anime{
+    margin-top: 40px;
+    display: flex;
+    gap: 30px;
+}
+body{
+    background-color: #F3EEC4;
+}
+h1{
+    font-size: 65px;
+    font-family: 'Protest Strike', sans-serif;
+}
+.tvs-container{
+    margin-top: 35px;
+}
+h2{
+    color: #F6AE7B;
+    font-size: 24px;
+}
+.kc{
+    color: #DE0F0F;
+    font-size: 30px;
+    background-color: #FCA4A4;
+    font-family: 'Kosugi Maru', sans-serif;
+    border: none;
+    border-radius: 30px;
+    font-weight: bolder;
+    width: 200px;
+    height: 80px;
+    margin-top: 0 auto;
+}
+
+.kinou{
+    text-align: center;
+}
+.dm{
+    margin-left: 80px;
+}
+
+.vr{
+    margin-left: -150px;
+}
+
+.mv{
+    margin-left: 54px;
+}
+
+.am{
+    margin-left: 30px;
+}
+
+.newpost{
+    text-align: center;
+}
+
+.posting{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.post{
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    border:none;
+    background:#FCA4A4;
+    color: #FF4545;
+    font-size: 30px;
+    font-family: 'Kosugi Maru', sans-serif;
+    text-align: center;
+    transition: color .3s;
+    border-radius: 60px;
+    height: 80px;
+    width: 200px;
+    position: absolute;
+    top:850px;
+    left:650px;
+    font-weight: border;
+}
+
+.look{
+    text-align: center;
+}
+
+.theme{
+    color: #E97727;
+    font-size: 20px;
+    font-family: 'Protest Strike', sans-serif;
+}
+
+.genre{
+    color: #E97727;
+    font-size: 20px;
+    font-family: 'Protest Strike', sans-serif;
+}
+
+.name{
+    color: #E97727;
+    font-size: 20px;
+    font-family: 'Protest Strike', sans-serif;
+}
+
+.content{
+    color: #E97727;
+    font-size: 20px;
+    font-family: 'Protest Strike', sans-serif;
+}
+
+.actor{
+    color: #E97727;
+    font-size: 20px;
+    font-family: 'Protest Strike', sans-serif;
+}
+
+.photo{
+    color: #E97727;
+    font-size: 20px;
+    font-family: 'Protest Strike', sans-serif;
+}

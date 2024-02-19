@@ -1,0 +1,29 @@
+<h1>詳細ページ</h1>
+<h3>Tweet詳細</h3>
+<div class="tv">
+  <p><%= @tv.title %></p>
+  <p><%= @tv.created_at %></p>
+  <% if user_signed_in? %>
+      <% if current_user.already_liked?(@tv) %>
+        <%= button_to tv_like_path(@tv), method: :delete do %>
+          <p>いいねを取り消す</p><%= @tv.likes.count %>
+        <% end %>
+      <% else %>
+        <%= button_to tv_likes_path(@tv), method: :post do %>
+          <p>いいね</p><%= @tv.likes.count %>
+        <% end %>
+      <% end %>
+    <% else %>
+      <p>いいねの数 = </p><%= @tv.likes.count %>
+    <% end %>
+  <%= link_to "編集する", edit_tv_path(@tv.id) %>
+</div>
+
+<h2>いいねしたユーザー</h2>
+<% @tv.liked_users.each do |user| %>
+  <li><%= user.email %></li>
+<% end %>
+
+<%= link_to "Tweet一覧に戻る", tvs_path %>
+
+<%= link_to "編集する", edit_tv_path(@tv.id) %>

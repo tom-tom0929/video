@@ -1,0 +1,37 @@
+<%= form_for @tv do |f| %>
+    # データ型がstringで自由記述の入力フォーム
+  <div class="field">
+    <%= f.label :テーマ %>
+    <%= f.text_field :name, :size => 30 %>
+  </div>
+
+# データ型がstringで選択式の入力フォーム
+  <div class="field">
+    <%= f.label :ジャンル  %>
+    <%= f.select :genre, 
+    [["ドラマ", "ドラマ"], 
+    ["アニメ", "アニメ"], 
+    ["バラエティー番組", "バラエティー番組"],
+    ["ドキュメンタリー", "ドキュメンタリー"],
+    ["音楽番組", "音楽番組"]], include_blank: "選択して下さい" %>
+  </div>
+
+  # データ型がstringで自由記述の入力フォーム
+  <div class="field">
+    <%= f.label :出演者 %>
+    <%= f.text_field :actor, :size => 30 %>
+  </div>
+
+  # データ型がtextで自由記述の入力フォーム
+  <div class="field">
+    <%= f.label :番組内容  %>
+    <%= f.text_area :about, :size => "30x2" %>
+  </div>
+
+   # データ型がstringで自由記述の入力フォーム
+   <div class="field">
+   <%= f.label :番組名 %>
+   <%= f.text_field :title, :size => 30 %>
+ </div>
+    <%= f.submit "編集する" %>
+  <% end %>

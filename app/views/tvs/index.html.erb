@@ -1,0 +1,55 @@
+<h1>CONTENTSHOW</h1>
+<div class="tvs-container">
+
+<div class="dorama"> 
+<h2>ドラマ</h2>
+<% @dorama.each do |t| %>
+  <div class="dm">
+  <br><br><%= image_tag t.image_url, size: "400x300" if t.image? %>
+  
+  </div>
+<% end %>
+</div>
+
+<div class="variety"> 
+<h2>バラエティ</h2>
+<% @variety.each do |t| %>
+  <div class="vr">
+  <br><br><%= image_tag t.image_url, size: "400x300" if t.image? %>
+  
+  </div>
+<% end %>
+</div>
+
+<div class="eiga"> 
+<h2>映画</h2>
+<% @eiga.each do |t| %>
+  <div class="mv">
+  <br><br><%= image_tag t.image_url, size: "400x300" if t.image? %>
+  
+  </div>
+<% end %>
+</div>
+
+<div class="anime"> 
+<h2>アニメ</h2>
+<% @anime.each do |t| %>
+  <div class="am">
+  <br><br><%= image_tag t.image_url, size: "400x300" if t.image? %>
+  
+  </div>
+<% end %>
+</div>
+</div>
+<div class="kinou">
+<br><br><br><%= button_to '診断機能へ', sindans_path, method: :get, class:"kc"%>
+</div>
+
+<br><br><%= link_to '新規投稿へ', new_tv_path, method: :get, class:"sinki" %>
+いいねランキング
+<% @tv_like_ranks.each.with_index(1) do |t, i| %>
+  第<%= i %>位
+:
+<%= image_tag t.image_url, size: "400x300" if t.image? %>
+:
+<% end %>

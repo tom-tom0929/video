@@ -1,0 +1,54 @@
+<h1 class="newpost">NEW POST</h1>
+<div class="posting">
+<br><br><br>
+<%= form_for @tvs do |f| %>
+<br><br><br>
+  <div class="theme">
+    <%= f.label :テーマ %>
+    <%= f.text_field :name, :size => 50 %>
+
+    <br><br><br><br>
+  </div>
+
+  <div class="genre">
+    <%= f.label :ジャンル  %>
+    <%= f.select :genre, 
+    [["ドラマ", "ドラマ"], 
+    ["バラエティ", "バラエティ"],
+    ["映画", "映画"], 
+    ["アニメ", "アニメ"]], include_blank: "選択して下さい" %>
+    <br><br><br><br>
+  </div>
+
+  <div class="name">
+  <%= f.label :番組名 %>
+  <%= f.text_field :title, :size => 50 %>
+  <br><br><br><br>
+  </div>
+
+  <div class="content">
+    <%= f.label :番組内容  %>
+    <%= f.text_area :about, :size => "60x20" %>
+    <br><br><br><br>
+  </div>
+
+  <div class="actor">
+    <%= f.label :出演者 %>
+    <%= f.text_field :actor, :size => 50 %>
+    <br><br><br><br>
+  </div>
+
+  <div class="photo">
+    <%= f.label :画像投稿 %>
+    <%= f.file_field :image %>
+    <br><br><br><br><br><br><br><br><br>
+  </div>
+  
+  <%= f.submit "投稿する", class:"post" %>
+    <% end %>
+    
+</div>
+
+<div class="look">
+ <%= link_to "一覧に戻る", tvs_path %>
+</div>
